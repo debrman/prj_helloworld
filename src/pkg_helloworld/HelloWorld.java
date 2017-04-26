@@ -18,10 +18,8 @@ public class HelloWorld {
         FileWorker.reader(); 
         return 1;
         //111111111
-        //222222222
-        //3333333333
-        //444444444444444444444
-        //55555555555555555555555555
+        //66
+        //77777
     }
     static byte test2()
     {
