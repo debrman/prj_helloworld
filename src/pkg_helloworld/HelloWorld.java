@@ -12,12 +12,17 @@ public class HelloWorld {
         }        
         System.out.println("</SOAP>");
         //----------------------
-        byte a = test();
-               
-        System.out.println(a);                        
+        System.out.print("<SwingTest>");        
         SwingTest.main(args);
+        System.out.println("</SwingTest>");        
+        System.out.print("<DomExample>");
         DomExample.main(args);
+        System.out.println("</DomExample>");
+        System.out.print("<DomExample2>");        
         DomExample2.main(args);
+        System.out.println("</DomExample2>");        
+        byte a = test();               
+        System.out.println(a);                        
         return;
     }
     static byte test()
