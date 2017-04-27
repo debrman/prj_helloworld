@@ -3,7 +3,17 @@ package pkg_helloworld;
 public class HelloWorld {
 
     public static void main(String[] args) {
+        //----------------------
+        System.out.print("<SOAP>");
+        try {
+            SingleRP_SOAP.main(args);
+        } catch (Exception e) {
+            System.out.print(e.toString());            
+        }        
+        System.out.println("</SOAP>");
+        //----------------------
         byte a = test();
+               
         System.out.println(a);                        
         SwingTest.main(args);
         DomExample.main(args);
