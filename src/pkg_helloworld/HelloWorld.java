@@ -3,26 +3,33 @@ package pkg_helloworld;
 public class HelloWorld {
 
     public static void main(String[] args) {
-        //----------------------
-        System.out.print("<SOAP>");
+        
+        System.out.println("<1:out+files>");
+        byte a = test();               
+        System.out.println(a);                        
+        System.out.println("</1:out+files>");
+        
+        System.out.println("<2:read xml>");
+        DomExample.main(args);
+        System.out.println("</2:read xml>");
+        
+        System.out.println("<3:write xml>");
+        DomExample2.main(args);
+        System.out.println("</3:write xml>");
+        
+        System.out.println("<4:SwingTest>");        
+        SwingTest.main(args);
+        System.out.println("</4:SwingTest>");        
+        
+
+        System.out.println("<5:SOAP>");
         try {
             SingleRP_SOAP.main(args);
         } catch (Exception e) {
             System.out.print(e.toString());            
         }        
-        System.out.println("</SOAP>");
-        //----------------------
-        System.out.print("<SwingTest>");        
-        SwingTest.main(args);
-        System.out.println("</SwingTest>");        
-        System.out.print("<DomExample>");
-        DomExample.main(args);
-        System.out.println("</DomExample>");
-        System.out.print("<DomExample2>");        
-        DomExample2.main(args);
-        System.out.println("</DomExample2>");        
-        byte a = test();               
-        System.out.println(a);                        
+        System.out.println("</5:SOAP>");
+
         return;
     }
     static byte test()

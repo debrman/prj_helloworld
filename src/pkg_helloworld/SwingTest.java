@@ -14,7 +14,7 @@ public class SwingTest extends JFrame {
 	
 	public SwingTest() {
 	    super("Simple Example");
-	    this.setBounds(500,500,2500,1000);
+	    this.setBounds(500,500,700,300);
             this.setResizable(true);
             this.setTitle("Ooooooooooooooo");
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,6 +49,9 @@ public class SwingTest extends JFrame {
 		    		message,
 		    		"Output",
 		    	    JOptionPane.PLAIN_MESSAGE);
+                        
+                        System.out.println("<4:END>");
+                        dispose(); // выход
 		}
 	}
 
