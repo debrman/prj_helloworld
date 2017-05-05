@@ -20,7 +20,8 @@ public class HelloWorld {
         System.out.println("<4:SwingTest>");        
         SwingTest.main(args);
         System.out.println("</4:SwingTest>");        
-        //----------------------
+        
+
         System.out.println("<5:SOAP>");
         try {
             SingleRP_SOAP.main(args);
@@ -28,7 +29,7 @@ public class HelloWorld {
             System.out.print(e.toString());            
         }        
         System.out.println("</5:SOAP>");
-        //----------------------               
+
         return;
     }
     static byte test()
