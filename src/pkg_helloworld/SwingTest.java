@@ -3,8 +3,9 @@ package pkg_helloworld;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-//////////////////////////
+///////////////////////////
 public class SwingTest extends JFrame {
+        private JLabel label0 = new JLabel("!!!!!!!!!!");    
 	private JButton button = new JButton("Press");
 	private JTextField input = new JTextField("", 5);
 	private JLabel label = new JLabel("Input:");
@@ -19,9 +20,15 @@ public class SwingTest extends JFrame {
             this.setTitle("Ooooooooooooooo");
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-	    Container container = this.getContentPane();
-	    container.setLayout(new GridLayout(3,2,2,2));
-	    container.add(label);
+            //--------------------
+	    Container container0 = this.getContentPane();
+            container0.setLayout(new GridLayout(1,1));
+            container0.add(label0);
+            //--------------------
+            
+            Container container = this.getContentPane();
+	    container.setLayout(new GridLayout(3,2,2,2));            
+            container.add(label);
 	    container.add(input);
 
 	    ButtonGroup group = new ButtonGroup();
@@ -50,13 +57,14 @@ public class SwingTest extends JFrame {
 		    		"Output",
 		    	    JOptionPane.PLAIN_MESSAGE);
                         
-                        System.out.println("<4:END>");
+                        System.out.println("<100:END>");
                         dispose(); // выход
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(int args) {
 		SwingTest app = new SwingTest();
 		app.setVisible(true);
+                app.label0.setText("Параметр из БД = "+Integer.toString(args)); //вывожу полученный параметр на форму
 	}
 }
