@@ -4,7 +4,7 @@ public class FileWorker {
     public static void main(String[] args) {
     }
 static void writer(){
-        try(FileWriter writer = new FileWriter("d:\\GIT\\temp\\notes3.txt", false))
+        try(FileWriter writer = new FileWriter("c:\\work_git\\prj_helloworld\\files\\notes3.txt", false))
         {
            // запись всей строки
             String text = "Мама мыла раму, раму мыла мама";
@@ -22,7 +22,7 @@ static void writer(){
     } 
    
 static void reader(){
-        try(FileReader reader = new FileReader("d:\\GIT\\temp\\notes3.txt"))
+        try(FileReader reader = new FileReader("c:\\work_git\\prj_helloworld\\files\\notes3.txt"))
         {
            // читаем посимвольно
             int c;

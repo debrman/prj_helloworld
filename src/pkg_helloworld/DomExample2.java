@@ -24,7 +24,7 @@ public class DomExample2 {
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             // Создается дерево DOM документа из файла
-            Document document = documentBuilder.parse("d:\\GIT\\temp\\BookCatalog.xml");
+            Document document = documentBuilder.parse("c:\\work_git\\prj_helloworld\\files\\BookCatalog-r.xml");
  
             // Вызываем метод для добавления новой книги
             addNewBook(document);
@@ -87,7 +87,7 @@ public class DomExample2 {
         try {
             Transformer tr = TransformerFactory.newInstance().newTransformer();
             DOMSource source = new DOMSource(document);
-            FileOutputStream fos = new FileOutputStream("d:\\GIT\\temp\\other.xml");
+            FileOutputStream fos = new FileOutputStream("c:\\work_git\\prj_helloworld\\files\\BookCatalog-w.xml");
             StreamResult result = new StreamResult(fos);
             tr.transform(source, result);
         } catch (TransformerException | IOException e) {
